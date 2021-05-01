@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+<link rel="stylesheet" href="index.css" />
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/all.min.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+ <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+ <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+
+</head>
+
+<body>
+
+<div class="lib_name">
+	
+<h1>
+
+Musaib's Library
+
+</h1>
+
+</div>
+
+
+<div class="container-fluid">
+<div class="row">
+
+<div class="col-md-4 col-10 d-block mx-auto">
+
+<div id="wrap">
+<p id="result"></p>
+</div>
+
+</div>
+
+</div>
+</div>
+
+
+
+
+
+<!-- <div></div>
+ -->
+
+<div class="container-fluid mr-top_one">
+	
+<div class="row " style="margin-bottom: 20px;">
+	
+
+<div class="col-md-6 box_pad" >
+
+	<div class="row">
+		
+		<div class="col-md-10 box" >
+			
+			<h1 class="lib_head">Welcome To Library</h1>
+
+			<form name="lib_form" class="form_box">
+				
+			<label for="bookName" class="label_one"  >Name :</label>
+			<input type="text" id="name"   class="input_one" placeholder="Enter  Book Name" />
+			<br /><br />
+
+			<label for="bookName" class="label_one">Author :</label>
+			<input type="text" id="author" class="input_one" placeholder="Enter  Author Name"  />
+			<br /><br />
+
+			<label for="type" class="label_one" >Type :</label>
+			<select name="type" id="type" class="input_one" onchange="this.style.color='black'">
+			<option value="" disabled selected >Select Book Type</option>	
+			<option value="Fiction">Fiction</option>
+			<option value="Non-Fiction">Non-Fiction</option>
+			<option value="Course">Course</option>
+			<option value="Other">Other</option>
+			</select>
+            <br /><br />  
+
+            <button type="button" value="Submit" class="btn_submit" onclick="submitForm()">Submit</button>
+			</form>
+
+
+
+		</div>
+	</div>
+
+</div>
+
+
+<div class="col-md-6 box_pad-2" >
+
+
+
+<div class="row">
+
+		
+		<div class="col-md-10 box_col" >
+		
+		
+		
+			<h1 class="lib_head" >Your Collections </h1>
+
+			<table id="mytable" >
+
+			<tr class="row_one">
+			<th>Serial No.</th>
+			<th>Book Name</th>
+			<th>Author Name</th>
+			<th>Book Type</th>
+			</tr>
+
+
+			
+				
+
+			
+
+
+			</table>
+
+		</div>
+
+		</div>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+
+
+
+<script>
+
+
+
+
+var i=0;
+
+function submitForm(){
+
+
+
+
+// window.alert(name);
+// window.alert(author);
+// window.alert(type);
+var name=document.getElementById("name").value;
+
+var author=document.getElementById("author").value;
+
+var type=document.getElementById("type").value;
+
+var table=document.getElementById("mytable");
+
+var len=table.rows.length;
+
+// alert("length :"+len);
+
+var res1=document.getElementById("result");
+
+
+
+
+
+
+if( name == "" || author == "" || type == "" ){
+
+
+res1.innerHTML="**Please Fill Out Input Fields";
+
+
+
+  $(document).ready(function(){
+
+
+  	$("#result").fadeIn("slow",function(){
+
+  		$("#result").delay(4000).fadeOut();
+  	});
+  });
+
+
+
+
+}
+
+else{
+
+i++;
+
+var row=table.insertRow(len);
+
+var cell0=row.insertCell(0);
+
+var cell1=row.insertCell(1);
+
+var cell2=row.insertCell(2);
+
+var cell3=row.insertCell(3);
+
+var cell4=row.insertCell(4);
+
+var cell5=row.insertCell(5);
+
+
+
+
+cell0.innerHTML=i;
+
+cell1.innerHTML=name;
+
+cell2.innerHTML=author;
+
+cell3.innerHTML=type;
+
+cell4.innerHTML="<button id='btn-del' onclick='myfunction(this)'><b> &nbsp  X &nbsp </b></button>";
+
+
+
+res1.innerHTML="Congrats !! Your Book has been added ";
+
+
+
+  $(document).ready(function(){
+
+
+  	$("#result").fadeIn("slow",function(){
+
+  		$("#result").delay(4000).fadeOut();
+  	});
+  });
+
+
+ document.lib_form.reset();
+ document.getElementById("type").style.color="grey";
+
+}
+
+
+
+
+
+
+
+
+// window.alert(i);
+
+// window.alert(name);
+
+// window.alert(author);
+
+// window.alert(type);
+
+
+
+// document.getElementById('name').value=''; 
+// document.getElementById('author').value=''; 
+// document.getElementById('type').value=''; 
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+}
+
+
+$(document).ready(function(){
+
+	$("#btn-del").click(function(){
+
+		alert("button clcik");
+	})
+})
+
+
+function myfunction(btn){
+
+var d=btn.parentNode.parentNode.rowIndex;
+document.getElementById("mytable").deleteRow(d);
+i=i-1;
+
+// alert("d"+d);
+
+
+
+var j=d++;
+
+// window.alert(j);
+// alert("j"+j);
+
+// var num;
+var len=document.getElementById("mytable").rows.length;
+var table=document.getElementById("mytable");
+
+
+for(num=j; num<len; num++ ){
+
+ 
+ // alert(num);
+ var update=document.getElementById("mytable").rows[num].cells[0].innerHTML=num;
+
+
+
+}
+
+
+// for(var i=1;i<len;i++){    
+//               table.rows[i].cells[0].innerHTML=i;
+//           }
+
+
+// var len=table.rows.length;
+
+// var num;
+
+
+// for(num=d+1, num<len ,num++){
+
+// var val_col=document.getElementById("mytable").rows[num].cells[1].innerHTML;
+
+// document.getElementById("mytable").rows[num].items[1].innerHTML=val_col+1;
+
+
+// }
+
+
+var res1=document.getElementById("result");
+
+res1.innerHTML="Book has been deleted Sucessfully";
+
+
+
+  $(document).ready(function(){
+
+
+  	$("#result").fadeIn("slow",function(){
+
+  		$("#result").delay(4000).fadeOut();
+  	});
+  });
+
+}
+
+
+</script>
+
+</body>
+</html>

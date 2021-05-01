@@ -1,0 +1,231 @@
+*{
+
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+body{
+
+	background-color: #fffdd0;
+}
+
+.lib_name{
+
+	background-color: #00FFFF;
+	height:110px;
+	width:100%;
+	max-width: 1500px;
+	/*line-height: 200px;*/
+
+
+
+}
+
+.lib_name h1{
+
+	text-align: center;
+	font-size: 45px;
+	color:#307D7E;
+	padding-top: 30px;
+}
+
+
+.box{
+
+	background-color:#00FFFF;
+	margin:auto;
+	border-radius: 6px;
+  
+}
+
+.box_col{
+
+	background-color:#00FFFF;
+	margin:auto;
+	border-radius: 6px;
+    min-height:385px;
+    padding-bottom: 20px;
+}
+
+/*.box_col_three{
+
+	background-color:red !important;
+	margin:0;
+	border-radius: 6px;
+    padding-bottom: 20px;
+    width:100%;
+    
+}*/
+
+.lib_head{
+
+	font-size: 35px;
+	color:#307D7E;
+	padding-top: 30px;
+	padding-left: 20px;
+	padding-bottom: 20px;
+	text-align: center;
+}
+
+.form_box{
+
+	padding-left:30px;
+	padding-right: 30px;
+	padding-bottom: 20px;
+}
+
+.input_one{
+
+	border:none;
+	outline: none;
+	padding: 8px 20px;
+	font-size: 18px;
+	width:80%;
+}
+
+.label_one{
+
+	width:80px;
+    font-size: 20px;
+}
+
+
+.btn_submit{
+
+	border:none;
+	outline:none !important;
+	padding: 12px 24px;
+	border-radius: 6px;
+	display:block;
+	margin:auto;
+	margin-top: 15px;
+	font-weight: bold;
+	color:#307D7E;
+	background-color: #fff;
+}
+
+/*select option{
+
+	color:grey;
+}*/
+
+select{
+
+	color:grey;
+}
+
+
+
+table{
+
+	width:95%;
+	text-align: center;
+	margin:auto;
+	
+
+}
+
+tr
+{
+    line-height:50px;
+}
+
+tr:nth-child(even) {
+  background-color: #fff;
+}
+
+/*#result{
+
+	background-color: #00FFFF;
+	height:50px;
+	width:100%;
+	max-width: 1500px;
+	margin-top: 20px;
+	line-height: 50px;
+	visibility: hidden;
+
+*//*}*/
+
+
+#wrap{
+
+	
+	height:50px;
+	margin-top: 20px;
+	line-height: 50px;
+	margin-bottom: 10px;
+
+
+}
+
+#result{
+
+	background-color: #00FFFF;
+	display:block;
+	border-radius: 10px;
+
+
+}
+
+input[type="text"]::selection{
+
+	background-color: #fff !important;
+}
+
+
+p{
+
+	text-align: center;
+	font-size: 20px;
+	color:#307D7E;
+	
+}
+
+.mr-top_one{
+
+	margin-top: 10px;
+}
+
+#btn-del{
+
+	background-color: transparent !important;
+	border:none;
+	outline: none;
+}
+
+@media only screen and (max-width:991px){
+
+.box_pad{
+
+	margin-right: 20px;
+	margin-left: 20px;
+}
+
+.box_pad-2{
+
+	margin-right: 20px;
+	margin-left: 20px;
+	margin-top: 30px;
+}
+
+
+.input_one{
+
+	width:60%;
+}
+
+.label_one{
+
+	width:90px;
+}
+
+.btn-submit{
+
+	width:90%;
+}
+}
+
+
+	
